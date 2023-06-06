@@ -5,37 +5,37 @@
         <button class="historic">Histórico</button>
     </div>
     <div class="view">
-        <p class="valueOut" id="CampoValor">9.999,99</p>
+        <p class="valueOut" id="CampoValor">0</p>
     </div>
     <div class="buttons">
         <div>
-            <button class="btn topBtn left">AC</button>
+            <button class="btn topBtn left" (click)="clean()">AC</button>
             <button class="btn topBtn"><img src='assets/P-M.svg'></button>
-            <button class="btn topBtn"><img src='assets/Percent.svg'></button>
-            <button class="btn operadoresBtn"><img src='assets/Divided.svg'></button>
+            <button class="btn topBtn" (click)="SetValue('%')"><img src='assets/Percent.svg'></button>
+            <button class="btn operadoresBtn" (click)="SetValue('/')"><img src='assets/Divided.svg'></button>
         </div>
         <div class="">
-            <button class="btn numbersBtn left" (click)="SetValue(7)">7</button>
-            <button class="btn numbersBtn" (click)="SetValue(8)">8</button>
-            <button class="btn numbersBtn" (click)="SetValue(9)">9</button>
-            <button class="btn operadoresBtn"><img src='assets/Times.svg'></button>
+            <button class="btn numbersBtn left" (click)="SetValue('7')">7</button>
+            <button class="btn numbersBtn" (click)="SetValue('8')">8</button>
+            <button class="btn numbersBtn" (click)="SetValue('9')">9</button>
+            <button class="btn operadoresBtn" (click)="SetValue('x')"><img src='assets/Times.svg'></button>
         </div>
         <div class="">
-            <button class="btn numbersBtn left" (click)="SetValue(4)">4</button>
-            <button class="btn numbersBtn" (click)="SetValue(5)">5</button>
-            <button class="btn numbersBtn" (click)="SetValue(6)">6</button>
-            <button class="btn operadoresBtn"><img class="less" src='assets/Minus.svg'></button>
+            <button class="btn numbersBtn left" (click)="SetValue('4')">4</button>
+            <button class="btn numbersBtn" (click)="SetValue('5')">5</button>
+            <button class="btn numbersBtn" (click)="SetValue('6')">6</button>
+            <button class="btn operadoresBtn" (click)="SetValue('-')"><img class="less" src='assets/Minus.svg'></button>
         </div>
         <div class="">
-            <button class="btn numbersBtn left" (click)="SetValue(1)">1</button>
-            <button class="btn numbersBtn" (click)="SetValue(2)">2</button>
-            <button class="btn numbersBtn" (click)="SetValue(3)">3</button>
-            <button class="btn operadoresBtn"><img src='assets/Plus.svg'></button>
+            <button class="btn numbersBtn left" (click)="SetValue('1')">1</button>
+            <button class="btn numbersBtn" (click)="SetValue('2')">2</button>
+            <button class="btn numbersBtn" (click)="SetValue('3')">3</button>
+            <button class="btn operadoresBtn" (click)="SetValue('+')"><img src='assets/Plus.svg'></button>
         </div>
         <div class="">
-            <button class="numberBtnZero left" (click)="SetValue(0)">0</button>
-            <button class="btn numbersBtn">,</button>
-            <button class="btn IqualBtn"><img src='assets/Equals.svg'></button>
+            <button class="numberBtnZero left" (click)="SetValue('0')">0</button>
+            <button class="btn numbersBtn" (click)="SetValue(',')">,</button>
+            <button class="btn IqualBtn" (click)="calculo()"><img src='assets/Equals.svg'></button>
         </div>
     
     </div>

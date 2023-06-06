@@ -5,10 +5,10 @@ import { Component, OnInit, EventEmitter, Output} from '@angular/core';
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.scss']
 })
+
 export class CalculadoraComponent implements OnInit{
-  value = 0;
-  valor1: number[] = [];
-  valor2 = 0;
+  value: any = '';
+  valorConcat: any = '';
 
 
   ngOnInit(): void {
@@ -20,15 +20,47 @@ export class CalculadoraComponent implements OnInit{
     this.closePopup.emit();
   }
 
-  SetValue(value: number){
+  clean() {
+    this.valorConcat = ''
+    document.getElementById("CampoValor")!.innerText = '0'
+  }
+
+  SetValue(value: string){
     this.value = value;
 
-    this.valor1.push(value)
-    console.log('Value: ', this.valor1)
-    document.getElementById("CampoValor")!.innerText =  `${this.valor1} `
+    this.valorConcat += value
+    document.getElementById("CampoValor")!.innerText = this.valorConcat
+
+  } 
+
+  calculo() {
+    let valores: any[] = this.valorConcat.split(/[-+/x]/);
+    valores = valores.map(str => parseInt(str));
+    var resultado: number = 0
+
+    if (this.valorConcat.includes('+')) {
+      console.log('Operação selecionada: Soma')
+      resultado = (valores[0] + valores[1])
+
+    } else if (this.valorConcat.includes('-')) {
+      console.log('Operação selecionada: Subtração');
+      resultado = (valores[0] - valores[1])
+
+    } else if (this.valorConcat.includes('x')) {
+      console.log('Operação selecionada: Multiplicação');
+      resultado = (valores[0] * valores[1])
+
+    } else if (this.valorConcat.includes('/')) {
+      console.log('Operação selecionada: Divisão');
+      resultado = parseFloat((valores[0] / valores[1]).toFixed(4));
+
+    } else {
+      console.log('Operação inválida!')
+    }
+
+    document.getElementById("CampoValor")!.innerText = this.valorConcat + '=' + resultado
+    
   }
 
 }
-
-
 

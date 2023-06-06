@@ -21,11 +21,6 @@ export class TelaPrincipalComponent implements OnInit {
   showPopup() {
     this.isPopupVisible ? this.isPopupVisible = false : this.isPopupVisible = true
   }
-
-
-  closePopup() {
-    this.isPopupVisible = false;
-  }
 }
 
 
