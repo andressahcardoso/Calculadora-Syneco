@@ -1,0 +1,40 @@
+.body {  
+    background-color: #0D7FA9;
+}
+
+header {
+    height: 6.5vh;
+    background-color: #0B7197;
+    display: flex;
+    justify-content: space-between; /* ALinhar no centro - HORIZONTAL */
+    align-content: center; /* Alinhar no centro - VERTICAL */
+    flex-wrap: wrap; /* Alinhar no centro - VERTICAL */
+    padding: 0vh 1.5vw 0vh 1.5vw;
+}
+
+header div {
+    display: flex;
+    align-items: center; //centraliza horizontalmente
+    justify-content: center; //cetraliza verticalmente
+    
+}
+
+.LogoSyneco {
+    height: 4vh;
+}
+
+.CalculatorIcon {
+    height: 5vh;
+    margin-right: 1vw;
+}
+
+.SettingsIcon {
+    height: 3vh;
+}
+
+button {
+    border: none;
+    margin-left: .5vw;
+    background-color: #0096cc00; /* Fundo transparente para o botão */
+    cursor: pointer;
+}

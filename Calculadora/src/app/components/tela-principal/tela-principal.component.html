@@ -1,0 +1,18 @@
+<div class="body">
+    <header>
+        <div>
+            <img class="ListIcon" src="../assets/ListIcon.svg" alt="List Icon"/>
+        </div>
+        <div>
+            <img class="LogoSyneco" src="../assets/LogoSyneco.svg" alt="Logo Syneco"/>
+        </div>
+        <div>
+            <button (click)="showPopup()"><img class="CalculatorIcon" src="../assets/CalculatorIcon.png" alt="Calculator Icon"/></button>
+            <img class="SettingsIcon" src="../assets/SettingsIcon.svg" alt="Settings Icon"/>
+        </div>
+    </header>
+    <app-calculadora *ngIf="isPopupVisible" (closePopup)="closePopup()"></app-calculadora>
+</div> 
+
+
+

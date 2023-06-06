@@ -1,0 +1,151 @@
+* {
+    border-radius: 3px;
+    
+}
+
+img {
+    width: .8rem;
+}
+
+button {
+    border: none;
+    font-size: 16px;
+    margin-left: .5vw;
+    color: rgba(255, 255, 255, 0.845);
+    cursor: pointer;
+}
+
+body {
+    top: 4vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 9999;
+}
+
+.calculadora {
+    border-radius: 3px;
+    margin-right: 1vw;
+    background-color: #0097CC;
+    width: 28vh;
+    height: 60vh;
+    padding: 1vh 2vh 2vh 2vh;
+    display: grid;
+    grid-template-rows: 4vh 10vh 40vh 6vh;
+    grid-template-areas: 'head'
+                         'view'
+                         'buttons'
+                         'back'                      
+}
+
+
+
+/* INÍCIO | Head */
+
+.head {
+    grid-area: head;
+    display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+}
+
+.head p {
+    font-size: 16px;
+    color: white;
+}
+
+.historic {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.845);
+    border: none;
+    background-color: #0096cc00; /* Fundo transparente para o botão */
+}
+
+
+/* INÍCIO | View */
+
+.view {
+    grid-area: view;
+    width: 96%;
+    margin-left: 0px;
+    padding: 1vh 1.5vh 1vh 0vh;
+    background-color: #0D7FA9;
+    display: flex;
+    flex-direction:column;
+        justify-content: end; /* ALinhar no centro - HORIZONTAL */
+        align-content: end; /* Alinhar no centro - VERTICAL */
+        flex-wrap: wrap; /* Alinhar no centro - VERTICAL */
+}
+
+.valueOut {
+    color: white;
+    font-size: 1.2em;
+}
+
+
+/* INÍCIO | Buttons - Números */
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        align-content: center; 
+        flex-wrap: wrap;  
+
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.btn {
+    width: 6vh;
+    height: 6vh;
+}
+
+.topBtn {
+    background-color: #0D7FA9
+}
+
+.operadoresBtn {
+    background-color: #FF6869;
+}
+
+.numbersBtn {
+    background-color: #0B7197;
+}
+
+.numberBtnZero {
+    width: 13vh;
+    height: 6vh;
+    background-color: #0B7197;
+}
+
+.IqualBtn {
+    background-color: #86CE84;
+}
+
+.less {
+    margin-bottom: .5vh; /* Manter o ícone (-) no centro */
+}
+
+.left {
+    margin-left: 0vw;
+}
+
+
+/* INÍCIO | Botão - Voltar */
+
+.back {
+    display: flex;
+    justify-content: center;
+}
+
+.back button {
+    width: 99%;
+    margin-left: 0px;
+    padding: 1vh 0vh 1vh 0vh;
+    color: rgba(255, 255, 255, 0.845);
+    background-color: #0D7FA9;
+}
