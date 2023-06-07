@@ -68,12 +68,12 @@ body {
 
 .view {
     grid-area: view;
-    width: 96%;
-    margin-left: 0px;
+    width: 13vw;
+    overflow: auto;
     padding: 1vh 1.5vh 1vh 0vh;
     background-color: #0D7FA9;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
         justify-content: end; /* ALinhar no centro - HORIZONTAL */
         align-content: end; /* Alinhar no centro - VERTICAL */
         flex-wrap: wrap; /* Alinhar no centro - VERTICAL */
@@ -81,7 +81,8 @@ body {
 
 .valueOut {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    margin-bottom: -0.2vh;
 }
 
 

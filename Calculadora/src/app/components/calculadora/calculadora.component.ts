@@ -34,12 +34,14 @@ export class CalculadoraComponent implements OnInit{
   } 
 
   calculo() {
-    let valores: any[] = this.valorConcat.split(/[-+/x]/);
-    valores = valores.map(str => parseInt(str));
+    let valores: any[] = this.valorConcat.split(/[-+/x*]/)
+    valores = valores.map(str => str.replace(',', '.'))
+    valores = valores.map(number => parseFloat(number));
     var resultado: number = 0
 
     if (this.valorConcat.includes('+')) {
       console.log('Operação selecionada: Soma')
+      console.log(valores)
       resultado = (valores[0] + valores[1])
 
     } else if (this.valorConcat.includes('-')) {
@@ -58,8 +60,8 @@ export class CalculadoraComponent implements OnInit{
       console.log('Operação inválida!')
     }
 
-    document.getElementById("CampoValor")!.innerText = this.valorConcat + '=' + resultado
-    
+    document.getElementById("CampoValor")!.innerText = this.valorConcat + '=' + String(resultado).replace('.', ',')
+    this.valorConcat = ''
   }
 
 }
